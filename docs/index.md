@@ -3,23 +3,27 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "我是梅利奥猪猪"
+  text: "欢迎来到我的博客"
+  tagline: 一条喜欢撸码也喜欢打游戏的咸鱼！
   actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+    # - theme: brand
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Frontend
+      link: /frontend
+    - theme: alt
+      text: Cocos
+      link: /cocos
+    - theme: alt
+      text: FTG
+      link: /ftg
 
 features:
-  - title: Feature A
-    details: 功能A
-  - title: Feature B
-    details: 功能B
-  - title: Feature C
-    details: 功能C
+  - title: Frontend
+    details: 记录我的前端之旅
+  - title: Cocos
+    details: 自学cocos打造我的副业
+  - title: FTG
+    details: FTG游戏爱好者
 ---
 
