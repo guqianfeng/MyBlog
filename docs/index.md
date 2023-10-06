@@ -15,15 +15,15 @@ hero:
       text: Cocos
       link: /cocos
     - theme: alt
-      text: FTG
-      link: /ftg
+      text: Game
+      link: /game
 
 features:
   - title: Frontend
     details: 记录我的前端之旅
   - title: Cocos
     details: 自学cocos打造我的副业
-  - title: FTG
-    details: FTG游戏爱好者
+  - title: Game
+    details: 游戏爱好者
 ---
 

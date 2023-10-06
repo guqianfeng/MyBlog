@@ -11,7 +11,7 @@ export default defineConfig({
       { text: 'Home', link: '/' },
       { text: 'Frontend', link: '/frontend' },
       { text: 'Cocos', link: '/cocos' },
-      { text: 'FTG', link: '/ftg' },
+      { text: 'Game', link: '/game' },
     ],
 
     sidebar: [
@@ -30,10 +30,10 @@ export default defineConfig({
         ]
       },
       {
-        text: 'FTG',
+        text: 'Game',
         items: [
-          { text: 'FTGA', link: 'ftg/ftgA' },
-          { text: 'FTGB', link: 'ftg/ftgB' }
+          { text: 'GameA', link: 'game/gameA' },
+          { text: 'GameB', link: 'game/gameB' }
         ]
       }
     ],
