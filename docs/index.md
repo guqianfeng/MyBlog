@@ -16,10 +16,10 @@ hero:
 
 features:
   - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: 功能A
   - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: 功能B
   - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: 功能C
 ---
 
