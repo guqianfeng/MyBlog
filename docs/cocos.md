@@ -1,1 +1,5 @@
+---
+next: false
+---
+
 # Cocos
