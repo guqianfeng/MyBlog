@@ -415,11 +415,11 @@ export function observe (value: any, asRootData: ?boolean): Observer | void {
 
 底层的机制就是**event loop**
 
-![事件循环](./01-%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF.jpg)
+![事件循环](./images/01-事件循环.jpg)
 
 [一个老外写的博客](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 
-![02-vue2实现nextTick](./02-vue%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0nextTick.jpg)
+![02-vue2实现nextTick](./images/02-vue具体实现nextTick.jpg)
 
 - 异步：只要侦听到数据变化，Vue将开启一个队列，并缓冲到同一事件循环中发生的所有数据变更
 - 批量：如果同一个watcher被多次触发，只会被推入到队列中一次。去重对于避免不必要的计算和DOM操作是非常重要的。然后，在下一个事件循环tick中，Vue刷新队列执行实际工作
@@ -627,7 +627,7 @@ if (this.active) {
 - _update函数，更新函数的if，初始化只执行一次，else才是diff算法
 - diff:因为组件只有一个watcher，内部变化可能有多个值，为了知道变化点，所以要做2次vnode的变化点，从而得到不同点，进行差异化更新，不同点转化为dom操作
 
-![03-虚拟DOM](./03-%E8%99%9A%E6%8B%9FDOM.jpg)
+![03-虚拟DOM](./images/03-虚拟DOM.jpg)
 
 直接操作DOM是高效的，那为什么说虚拟DOM更高效呢
 
@@ -708,7 +708,7 @@ if (this.active) {
     }
   ```
 
-![虚拟dom根节点比较](./04-%E8%99%9A%E6%8B%9Fdom%E6%A0%B9%E8%8A%82%E7%82%B9%E6%AF%94%E8%BE%83.jpg)
+![虚拟dom根节点比较](./images/04-虚拟dom根节点比较.jpg)
 
 #### 测试页面
 
@@ -796,25 +796,25 @@ if (isUndef(vnode.text)) {
 
 #### updateChildren
 
-![05-updateChildren](./05-updateChildren.jpg)
+![05-updateChildren](./images/05-updateChildren.jpg)
 
 updateChildren主要作用是一种较高效的方式比对新旧两个Vnode的chldren得出最小操作补丁。执行一个双循环是传统方式，Vue中针对web场景特点做了特别的算法优化
 
 在新老两组Vnode节点的左右头尾两侧都有一个变量标记，在遍历过程中这几个变量都会向中间靠拢。当**oldStartIdx > oldEndIdx**或者**newStartIdx > newEndIdx**时结束循环
 
-![06-老头和新头一样](./06-%E8%80%81%E5%A4%B4%E5%92%8C%E6%96%B0%E5%A4%B4%E4%B8%80%E6%A0%B7.jpg)
+![06-老头和新头一样](./images/06-老头和新头一样.jpg)
 
-![07-老头和新尾一样](./07-%E8%80%81%E5%A4%B4%E5%92%8C%E6%96%B0%E5%B0%BE%E4%B8%80%E6%A0%B7.jpg)
+![07-老头和新尾一样](./images/07-老头和新尾一样.jpg)
 
-![08-老尾和新头一样](./08-%E8%80%81%E5%B0%BE%E5%92%8C%E6%96%B0%E5%A4%B4%E4%B8%80%E6%A0%B7.jpg)
+![08-老尾和新头一样](./images/08-老尾和新头一样.jpg)
 
-![09-老老实实找](./09-%E8%80%81%E8%80%81%E5%AE%9E%E5%AE%9E%E6%89%BE.jpg)
+![09-老老实实找](./images/09-老老实实找.jpg)
 
-![10-找到最后没找到](./10-%E6%89%BE%E5%88%B0%E6%9C%80%E5%90%8E%E8%BF%98%E6%98%AF%E6%B2%A1%E6%89%BE%E5%88%B0.jpg)
+![10-找到最后没找到](./images/10-找到最后还是没找到.jpg)
 
-![11-老的先结束了](./11-%E8%80%81%E7%9A%84%E5%85%88%E7%BB%93%E6%9D%9F%E4%BA%86.jpg)
+![11-老的先结束了](./images/11-老的先结束了.jpg)
 
-![12-新的先结束了](./12-%E6%96%B0%E7%9A%84%E5%85%88%E7%BB%93%E6%9D%9F%E4%BA%86.jpg)
+![12-新的先结束了](./images/12-新的先结束了.jpg)
 
 ```js
   function updateChildren (parentElm, oldCh, newCh, insertedVnodeQueue, removeOnly) {
