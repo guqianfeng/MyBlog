@@ -1,12 +1,12 @@
 # frontend
 
-## [native](./native/index.md)
+## :rofl: [native blog](./native/index.md)
 
 - JS
 
 - TS
 
-## [framework](./framework/index.md)
+## :smirk: [framework blog](./framework/index.md)
 
 - Vue
 
@@ -52,7 +52,7 @@ Here are some ideas to get you started:
 - React + Redux + TS
 - Vim
 
-## 😄 Others
+## :thumbsup: Others
 
 ![1](https://github-profile-trophy.vercel.app/?username=guqianfeng)
 
