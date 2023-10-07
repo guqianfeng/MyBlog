@@ -1,7 +1,0 @@
----
-next: false
----
-
-# FrontendB
-
-FrontendB

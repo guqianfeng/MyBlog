@@ -10,13 +10,13 @@ hero:
     # - theme: brand
     - theme: alt
       text: Frontend
-      link: /frontend
+      link: /frontend/index
     - theme: alt
       text: Cocos
-      link: /cocos
+      link: /cocos/index
     - theme: alt
       text: Game
-      link: /game
+      link: /game/index
 
 features:
   - title: Frontend

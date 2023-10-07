@@ -2,4 +2,4 @@
 next: false
 ---
 
-# GameA
+# framework

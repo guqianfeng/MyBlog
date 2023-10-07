@@ -2,4 +2,4 @@
 next: false
 ---
 
-# Game
+# composition api
