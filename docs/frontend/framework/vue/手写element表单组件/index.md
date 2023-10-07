@@ -101,7 +101,7 @@ export default {
 
 ```
 
-![01-input-v-model](./表单组件实现截图/01-input-v-model.gif)
+![01-input-v-model](./images/01-input-v-model.gif)
 
 这样一个最简单的双向数据绑定就完成了
 
@@ -114,7 +114,7 @@ export default {
 
 但加好`placeholder`这个属性之后以后发现了个问题！
 
-![02-root-attr](./表单组件实现截图/02-root-attr.jpg)
+![02-root-attr](./images/02-root-attr.jpg)
 
 原因是因为，我们在组件上写的属性，组件默认会继承，在组件的根元素加上这个属性，那该怎么办呢，只要在组件内加上选项`inheritAttrs: false`，根元素上就不会继承这个属性了！
 
@@ -154,7 +154,7 @@ export default {
 
 ```
 
-![03-$attrs](./表单组件实现截图/03-$attrs.jpg)
+![03-$attrs](./images/03-$attrs.jpg)
 
 完美轻松搞定，那如果此时在写个密码的input框，`type="password"`，小伙伴们你们说会怎么样？属性依然可以透传，效果还是杠杠的
 
@@ -189,7 +189,7 @@ export default {
 
 ```
 
-![04-$attrs-power](./表单组件实现截图/04-$attrs-power.jpg)
+![04-$attrs-power](./images/04-$attrs-power.jpg)
 
 好，那我们的`input`组件就先写到这里
 
@@ -255,7 +255,7 @@ export default {
 </sf-form-item>
 ```
 
-![05-form-item-label](./表单组件实现截图/05-form-item-label.jpg)
+![05-form-item-label](./images/05-form-item-label.jpg)
 
 label就完美处理好了！
 
@@ -387,7 +387,7 @@ input已经emit通知了form-item， form-item要用`$on`方法监听
   }
 ```
 
-![06-trigger-validate](./表单组件实现截图/06-trigger-validate.gif)
+![06-trigger-validate](./images/06-trigger-validate.gif)
 
 这样input如何通知form-item去校验就完成了
 
@@ -529,7 +529,7 @@ export default {
 
 ```
 
-![07-model-and-rules](./表单组件实现截图/07-model-and-rules.jpg)
+![07-model-and-rules](./images/07-model-and-rules.jpg)
 
 所以我们该怎么处理只关注的字段呢，请看下个知识点的讲解！
 
@@ -595,7 +595,7 @@ export default {
   
 ```
 
-![08-form-item-prop](./表单组件实现截图/08-form-item-prop.jpg)
+![08-form-item-prop](./images/08-form-item-prop.jpg)
 
 完美拿到对应表单项的数据以及校验规则，接下去使用个第三方库，参考文档直接撸就完事了！
 
@@ -630,7 +630,7 @@ export default {
     }
 ```
 
-![09-async-validator](./表单组件实现截图/09-async-validator.gif)
+![09-async-validator](./images/09-async-validator.gif)
 
 到这里，单个表单项校验就已经搞定了，离我们任务还差最后一个！
 
@@ -674,7 +674,7 @@ form组件实现validate方法
   }
 ```
 
-![10-form-validate.gif](./表单组件实现截图/10-form-validate.gif)
+![10-form-validate.gif](./images/10-form-validate.gif)
 
 完结撒花，恭喜大家，这次的案例，麻雀虽小五脏俱全！接下去简单扩展下源码
 

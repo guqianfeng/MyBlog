@@ -445,7 +445,7 @@ Vue.prototype.$notice = function (opts) {
 
 ### 效果演示
 
-[](./弹窗组件实现截图/01-show-notice.gif)
+![01](./images/01-show-notice.gif)
 
 完结撒花！
 
