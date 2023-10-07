@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试数据劫持</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1 id="a"></h1>
+        <h1 id="b"></h1>
+        <h1 id="c"></h1>
+    </div>
+    <script>
+        function defineReactive(obj, key, val) {
+            Object.defineProperty(obj, key, {
+                get() {
+                    console.log('get', { key, val });
+                    return val
+                },
+                set(newVal) {
+                    if (newVal != val) {
+                        console.log('set', { key, newVal });
+                        val = newVal
+                        // 注意以下代码新增, 要写在赋值后面哈！
+                        update()
+                    }
+                }
+            })
+        }
+        const obj = {}
+        // 添加3个属性
+        defineReactive(obj, 'a', 'a')
+        defineReactive(obj, 'b', 'b')
+        defineReactive(obj, 'c', 'c')
+        function update () {
+            a.innerHTML = obj.a
+            b.innerHTML = obj.b
+            c.innerHTML = obj.c
+        }
+        update()
+
+    </script>
+</body>
+
+</html>
