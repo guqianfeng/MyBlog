@@ -33,6 +33,10 @@ export default defineConfig({
       '/frontend/framework/': framework,
     },
 
+    /**
+     * icon 为 iconfont 下载
+     * #bfbfbf 16
+     */
     socialLinks: [
       {
         // github
