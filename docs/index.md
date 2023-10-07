@@ -7,8 +7,8 @@ hero:
   text: "欢迎来到我の博客"
   tagline: 这里是喜欢撸码也喜欢打游戏の咸鱼の博客！
   actions:
-    # - theme: brand
-    - theme: alt
+    - theme: brand
+    # - theme: alt
       text: Frontend
       link: /frontend/index
     - theme: alt
