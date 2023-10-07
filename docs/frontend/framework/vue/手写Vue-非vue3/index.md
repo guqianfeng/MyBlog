@@ -14,11 +14,11 @@ hello，大家好，我是梅利奥猪猪！就之前带大家手撸简易[VueRo
 
 众所周知，`vue`是个`mvvm`框架，这里就不做具体展开了，具体请看下图
 
-![01-mvvm.jpg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0c52ba622cf54464b73c9f7788e3af77~tplv-k3u1fbpfcp-watermark.image?)
+![01-mvvm.jpg](./images/01-mvvm.jpg)
 
 其中，图中的ViewModel对于我们来说，就像黑盒般的存在，他到底做了什么，让我们写vue，纵享丝滑，写的如此快乐轻松呢！这也就是此篇文章的目的，带大家来写个简易Vue，具体要实现的东西，也请看下图
 
-![02-目标.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d7003faf217347388a3e67cd1ae09bfa~tplv-k3u1fbpfcp-watermark.image?)
+![02-目标.jpg](./images/02-目标.jpg)
 
 可能现在的你还看不懂，看上去好复杂啊，随着文章的深入，这幅图的所有实现都会带着大家写完！那我们开始吧
 
@@ -58,7 +58,7 @@ obj.foo = 'new foo'
 
 写完这个，我们可以测试下，用node环境跑下代码，会发现，的确get和set的时候都触发了打印！
 
-![03-初次劫持数据.jpg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/4e92e9b782824f399219a64301705303~tplv-k3u1fbpfcp-watermark.image?)
+![03-初次劫持数据.jpg](./images/03-初次劫持数据.jpg)
 
 #### 放在一个测试页面并提供update方法测试
 
@@ -120,7 +120,7 @@ cv前面的js代码到测试页面，修改下，添加update函数，之后在�
 </html>
 ```
 
-![04-控制台数据劫持玩耍.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/17a2cdf006e348b1b716e1a1c8e4c6bd~tplv-k3u1fbpfcp-watermark.image?)
+![04-控制台数据劫持玩耍.gif](./images/04-控制台数据劫持玩耍.gif)
 
 我们可以发现，只要控制台修改了数据，视图就更新了，接着我们分析下问题，有这么几个疑问
 
@@ -159,7 +159,7 @@ obj.bar = 'new bar'
 
 ```
 
-![05-遍历劫持所有key.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53c73d31fd75482295ec40a76672a923~tplv-k3u1fbpfcp-watermark.image?)
+![05-遍历劫持所有key.jpg](./images/05-遍历劫持所有key.jpg)
 
 #### 数据劫持需要递归处理
 
@@ -177,7 +177,7 @@ obj.c.haha
 obj.c.haha = 4
 ```
 
-![06-不递归劫持不到里面的属性.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b193729bde704908bf637d3479bcc2c0~tplv-k3u1fbpfcp-watermark.image?)
+![06-不递归劫持不到里面的属性.jpg](./images/06-不递归劫持不到里面的属性.jpg)
 
 上面的截图，能发现，并没有劫持到haha这个属性，所以`observe`方法中`defineReactive`的`obj[key]`如果是对象就需要递归
 
@@ -199,7 +199,7 @@ function observe (obj) {
 
 此时在跑前面的代码，就能劫持到我们想要的属性了
 
-![07-递归后解决劫持问题.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0771e831af5a49a4bf71cd2f7f245a3a~tplv-k3u1fbpfcp-watermark.image?)
+![07-递归后解决劫持问题.jpg](./images/07-递归后解决劫持问题.jpg)
 
 #### 劫持set函数里还要在observe，因为用户可能直接赋值新的对象
 
@@ -214,7 +214,7 @@ obj.c.heihei = 555
 
 如果给属性赋值了新对象，数据劫持还是会出现问题
 
-![08-重新设置新的对象劫持出现问题.jpg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7579532d2a32423b848819f181595909~tplv-k3u1fbpfcp-watermark.image?)
+![08-重新设置新的对象劫持出现问题.jpg](./images/08-重新设置新的对象劫持出现问题.jpg)
 
 ```js
         set(newVal) {
@@ -228,7 +228,7 @@ obj.c.heihei = 555
 
 在set添加observe后，此时效果就出来了
 
-![09-在set方法里observe.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e335f0c84cd8458699a4e55470654caa~tplv-k3u1fbpfcp-watermark.image?)
+![09-在set方法里observe.jpg](./images/09-在set方法里observe.jpg)
 
 #### set方法
 
@@ -245,7 +245,7 @@ obj.c
 obj.c = 4
 ```
 
-![10-新加个属性不会劫持.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/97d22d522dcd4a8dbeee3b687982948f~tplv-k3u1fbpfcp-watermark.image?)
+![10-新加个属性不会劫持.jpg](./images/10-新加个属性不会劫持.jpg)
 
 所以Vue提供了set方法，新的属性就要新的劫持！
 
@@ -268,7 +268,7 @@ obj.c
 obj.c = 4
 ```
 
-![11-set方法实现及使用.jpg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d6eb8b87456c4207b1fdf2cbbe4d130d~tplv-k3u1fbpfcp-watermark.image?)
+![11-set方法实现及使用.jpg](./images/11-set方法实现及使用.jpg)
 
 #### 数组问题
 
@@ -281,11 +281,11 @@ arr[0]
 arr[1] = 222
 ```
 
-![12-数组可以劫持的情况.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c8af0ca6f04d4e1e99d2e03e9f9e6515~tplv-k3u1fbpfcp-watermark.image?)
+![12-数组可以劫持的情况.jpg](./images/12-数组可以劫持的情况.jpg)
 
 用户可能访问更大的索引，或者给数组添加删除等方法(会改变数组自身的方法)，此时就拦截不了, 数组7个变更方法处理会变更数组自身的方法，在做数组操作的同时，进行变更通知 此次不实现
 
-![13-数组不能劫持的情况.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fdd43fad356c4ddebf068bb79d790dab~tplv-k3u1fbpfcp-watermark.image?)
+![13-数组不能劫持的情况.jpg](./images/13-数组不能劫持的情况.jpg)
 
 #### 写静态页面使用官方的vuejs
 
@@ -352,7 +352,7 @@ setInterval(() => {
 
 将代码从`vm.count++`改成`vm.$data.count++`就有对应的打印了
 
-![14-数据在\$data上.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/452528c75dca46cd8748e51922eeec01~tplv-k3u1fbpfcp-watermark.image?)
+![14-数据在\$data上.jpg](./images/14-数据在$data上.jpg)
 
 #### 代理属性
 
@@ -394,7 +394,7 @@ Object.keys(obj.data).forEach(key => Object.defineProperty(obj, key, {
 }))
 ```
 
-![15-控制台测试代理.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/10461702c4cd45658d8a5f49b27a35b3~tplv-k3u1fbpfcp-watermark.image?)
+![15-控制台测试代理.jpg](./images/15-控制台测试代理.jpg)
 
 通过以上练习，接下去对Vue实例代理一层是不是就简单多了！实现后就能看到`vm.count++`也能触发劫持效果
 
@@ -481,7 +481,7 @@ class Compile {
 
 可以给各位小伙伴一个思考，为什么编译方法里获取的是childNodes而不是children，基础好的小伙伴应该猜到了！因为children只能获取元素，但childNodes可以获取节点
 
-![16-children和childNodes区别.jpg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6e3e467189b44e9fa597b6aa67c9a883~tplv-k3u1fbpfcp-watermark.image?)
+![16-children和childNodes区别.jpg](./images/16-children和childNodes区别.jpg)
 
 #### 判断元素还是文本
 
@@ -521,7 +521,7 @@ class Compile {
   }
 ```
 
-![17-打印元素和节点.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9bbf8316b0f34e589d1c040d87d6d9b4~tplv-k3u1fbpfcp-watermark.image?)
+![17-打印元素和节点.jpg](./images/17-打印元素和节点.jpg)
 
 #### 元素节点需要递归处理
 
@@ -537,7 +537,7 @@ if (this.isElement(node)) {
 } 
 ```
 
-![18-递归获取双大括号文本节点.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0a07a626b3224654941ab52de565b9c7~tplv-k3u1fbpfcp-watermark.image?)
+![18-递归获取双大括号文本节点.jpg](./images/18-递归获取双大括号文本节点.jpg)
 
 #### 编译text节点
 
@@ -557,7 +557,7 @@ else if(this.isInter(node)) {
 }
 ```
 
-![19-简易编译文本节点.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2958af236a0d4e0189ce634449003635~tplv-k3u1fbpfcp-watermark.image?)
+![19-简易编译文本节点.jpg](./images/19-简易编译文本节点.jpg)
 
 #### 元素节点解析指令
 
@@ -575,7 +575,7 @@ if (this.isElement(node)) {
 }
 ```
 
-![20-打印元素上的属性.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0e46285f846448edb8c16c63ed2f2c7e~tplv-k3u1fbpfcp-watermark.image?)
+![20-打印元素上的属性.jpg](./images/20-打印元素上的属性.jpg)
 
 接着遍历attrs，注意了他是个伪数组，所以先要转成真数组，在遍历！遍历后`console.dir`打印下`attr`
 
@@ -585,7 +585,7 @@ if (this.isElement(node)) {
 })
 ```
 
-![21-dir打印attr.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1c079b45049b499b810f17d76f010aa0~tplv-k3u1fbpfcp-watermark.image?)
+![21-dir打印attr.jpg](./images/21-dir打印attr.jpg)
 
 我们知道了`attr`上有`name`和`value`属性，那接下去，我们就解构加起别名处理下！
 
@@ -629,7 +629,7 @@ if (this.isDir(attrName)) {
 }
 ```
 
-![22-text指令解析成功.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/502166af611241528de185371cbb5648~tplv-k3u1fbpfcp-watermark.image?)
+![22-text指令解析成功.jpg](./images/22-text指令解析成功.jpg)
 
 思考：小伙伴们可以自行完成`v-html`指令试试哈，后面还会带大家实现`v-model`，还有事件`@click`等等
 
@@ -898,7 +898,7 @@ class Watcher {
 
 至此整个简易的vue就实现好了，在来回看之前的那个图，我们在分析下
 
-![23-分析开局的图.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/82d70dbcb9f5495e92f3553a92c61f2d~tplv-k3u1fbpfcp-watermark.image?)
+![23-分析开局的图.jpg](./images/02-目标.jpg)
 
 完结撒花！
 

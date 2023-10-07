@@ -100,11 +100,11 @@ export default new Vuex.Store({
 
 以上都属于基操，Vuex的一些基本使用，随后我们就能看到这样的效果（小伙伴们注意看下打印的this是什么）
 
-![01-Vuex基操.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d59420b97a7240118b35f4964e7ce4f3~tplv-k3u1fbpfcp-watermark.image?)
+![01-Vuex基操.gif](./images/01-Vuex基操.gif)
 
 友情提示哈，this指向都是Store实例哈，然后我们把`store/index.js`中，改成`my-vuex.js`就可以了
 
-![02-改成my-vuex.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0cb62e76070b45d2a115503e40686565~tplv-k3u1fbpfcp-watermark.image?)
+![02-改成my-vuex.png](./images/02-改成my-vuex.png)
 
 看到以上报错说明准备工作就好了，接下去我们就要开始实现自己的vuex了
 
@@ -145,7 +145,7 @@ export default {
 
 ```
 
-![03-开发插件.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1c2cd4b858b44c1290b03a73938985e0~tplv-k3u1fbpfcp-watermark.image?)
+![03-开发插件.png](./images/03-开发插件.png)
 
 此时报错信息也变了，因为我们提供了Store类，然后模板里使用了`$store`，然后报错了`$store`
 
@@ -174,7 +174,7 @@ const install = (Vue) => {
 }
 ```
 
-![04-$store处理.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2622a7b32f68462b94a1610ace931e9b~tplv-k3u1fbpfcp-watermark.image?)
+![04-$store处理.png](./images/04-$store处理.png)
 
 上图所示，报错信息已经变成了其他的，说明`$store`已经处理好了，之后就报了`state`的`count`的错
 
@@ -208,7 +208,7 @@ class Store {
 }
 ```
 
-![05-$$state响应式处理.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a065ba3f62cb4029ab5c6b317af60a9d~tplv-k3u1fbpfcp-watermark.image?)
+![05-$$state响应式处理.png](./images/05-$$state响应式处理.png)
 
 但我们使用上应该是这么用的吧`$store.state.xxx`，那这该怎么处理呢，在类中提供`get state`方法就可以了
 
@@ -220,13 +220,13 @@ class Store {
 
 此时页面清爽了，没有报错了，并且成功渲染出了页面
 
-![06-get方法state处理.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/79433bcac2b842ffbaab7f956154fb17~tplv-k3u1fbpfcp-watermark.image?)
+![06-get方法state处理.png](./images/06-get方法state处理.png)
 
 ### mutations处理 - 实现commit方法
 
 现在如果我们点击**add 1**按钮和**add 2**按钮是会报错的，因为还没有实现commit方法
 
-![07-点击按钮报错commit.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/274441b555d6457bb375c699fb064770~tplv-k3u1fbpfcp-watermark.image?)
+![07-点击按钮报错commit.png](./images/07-点击按钮报错commit.png)
 
 那接下去我们就慢慢来实现这个方法
 
@@ -248,7 +248,7 @@ class Store {
 }
 ```
 
-![08-点击后打印mutations.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5b78dc4b835c4acda293e415e44fe5a1~tplv-k3u1fbpfcp-watermark.image?)
+![08-点击后打印mutations.png](./images/08-点击后打印mutations.png)
 
 `mutations`的确拿到了，那之后不就是找到对应的方法调用就可以了
 
@@ -269,7 +269,7 @@ class Store {
   }
 ```
 
-![09-找到对饮给的mutation方法.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1820147bb2f04124a4c6400d703d5715~tplv-k3u1fbpfcp-watermark.image?)
+![09-找到对饮给的mutation方法.png](./images/09-找到对饮给的mutation方法.png)
 
 ##### 调用对应的mutation方法
 
@@ -291,7 +291,7 @@ class Store {
   }
 ```
 
-![10-实现commit方法.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/13faf5102a3247678a75030096df2486~tplv-k3u1fbpfcp-watermark.image?)
+![10-实现commit方法.gif](./images/10-实现commit方法.gif)
 
 很明显，我们已经基本完成了，已经可以修改`state`，但还差个`this`指向问题
 
@@ -312,7 +312,7 @@ class Store {
   }
 ```
 
-![11-修改this指向.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e4a8556b82a44dcca15cc60036500682~tplv-k3u1fbpfcp-watermark.image?)
+![11-修改this指向.gif](./images/11-修改this指向.gif)
 
 到这里**mutations处理-实现commit**就完成了
 
@@ -340,7 +340,7 @@ class Store {
 }
 ```
 
-![12-dispatch方法架子.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/338763e2793240fe8c38034a99baee35~tplv-k3u1fbpfcp-watermark.image?)
+![12-dispatch方法架子.png](./images/12-dispatch方法架子.png)
 
 #### 实现dispatch方法
 
@@ -367,7 +367,7 @@ class Store {
   }
 ```
 
-![13-实现dispatch.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b54649417e134855a767b27b78a22ce3~tplv-k3u1fbpfcp-watermark.image?)
+![13-实现dispatch.gif](./images/13-实现dispatch.gif)
 
 至此，`dispatch`也实现完成了，完结撒花
 
@@ -404,17 +404,17 @@ export default new Vuex.Store({
 
 然后测试下，看下是否work，的确就是我们熟悉的getters，效果也是正常的
 
-![14-复习getters.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ae60784efbd646c284f39cf45629a5da~tplv-k3u1fbpfcp-watermark.image?)
+![14-复习getters.gif](./images/14-复习getters.gif)
 
 #### 用回自己的my-vuex-处理getters报错
 
 前面快速的复习了getters的用法，那接下去就要手撕getters了，先用我们自己的my-vuex，看下页面有什么报错
 
-![15-用回自己vuex的getters报错.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/00583a8d8aa84c0aacab437f79d5831b~tplv-k3u1fbpfcp-watermark.image?)
+![15-用回自己vuex的getters报错.jpg](./images/15-用回自己vuex的getters报错.jpg)
 
 这个为什么会报错呢，很明显，我们store上没有getters属性，所以我们可以直接加一行`this.getters = {}`试试，在我们加上这行代码之后，控制台的报错就消失了
 
-![16-getters报错就消失了.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d2da93795e7a4a4a91b7c310dc21d8ae~tplv-k3u1fbpfcp-watermark.image?)
+![16-getters报错就消失了.jpg](./images/16-getters报错就消失了.jpg)
 
 处理getters报错这一趴，在做最后一件事，接收下用户传入的getters，我们用一个新的字段名`_wrappedGetters`接收下用户传入的getters
 
@@ -429,7 +429,7 @@ export default new Vuex.Store({
 
 ```
 
-![17-接收用户传入的getters.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d6999988ec0e40d7893160cc31153490~tplv-k3u1fbpfcp-watermark.image?)
+![17-接收用户传入的getters.jpg](./images/17-接收用户传入的getters.jpg)
 
 能看到控制台打印的方法，的确是用户传入的getters
 
@@ -475,7 +475,7 @@ export default new Vuex.Store({
     })
 ```
 
-![18-遍历打印用户传入的getter.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/990993c261394229a7701ba52e32e224~tplv-k3u1fbpfcp-watermark.image?)
+![18-遍历打印用户传入的getter.jpg](./images/18-遍历打印用户传入的getter.jpg)
 
 但我们用过vue的都知道，计算属性，形参是没有的，我们正常用`computed`是不是长这个样子的
 
@@ -544,7 +544,7 @@ computed: {
     })
 ```
 
-![19-实现myVuex的getters.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/19d564eac9d34583b1aec0009359cd16~tplv-k3u1fbpfcp-watermark.image?)
+![19-实现myVuex的getters.gif](./images/19-实现myVuex的getters.gif)
 
 那到这里我们就实现好了getters!噢耶
 

@@ -43,7 +43,7 @@ outline: deep
 
 首先先用脚手架 vue-cli 搭好项目，需要安装依赖 vue-router，等依赖装好启动项目后能看到效果那准备效果就 ok 了
 
-![01-脚手架搭vue-router项目.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/16aa0977f9134083829a5662a3394992~tplv-k3u1fbpfcp-watermark.image?)
+![01-脚手架搭vue-router项目.gif](./images/01-脚手架搭vue-router项目.gif)
 
 ## 开发走起
 
@@ -60,7 +60,7 @@ import HomeView from '../views/HomeView.vue'
 
 那在我们实现源码前，肯定是会有问题的，所以大家看到控制台的报错不要慌因为我们还没开始呢！
 
-![02-替换my-router空文件.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b07ed21d292f44e18e5879f2de9f4c72~tplv-k3u1fbpfcp-watermark.image?)
+![02-替换my-router空文件.jpg](./images/02-替换my-router空文件.jpg)
 
 ### Vue 插件机制
 
@@ -88,7 +88,7 @@ export default VueRouter;
 
 此时我们的报错已经变了，那我们这一趴如何开发插件就已经结束了
 
-![03-开发插件准备.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/94bd561a1bca4eeeaf82e937e107f7a1~tplv-k3u1fbpfcp-watermark.image?)
+![03-开发插件准备.jpg](./images/03-开发插件准备.jpg)
 
 ### 全局注册组件
 
@@ -107,7 +107,7 @@ export default VueRouter;
 
 然后我们又看到了不一样的报错！不要慌，问题很大，我们慢慢处理, 先来看图
 
-![04-全局注册后的报错.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/25fc7b50442342f6a96c6d646a933c47~tplv-k3u1fbpfcp-watermark.image?)
+![04-全局注册后的报错.jpg](./images/04-全局注册后的报错.jpg)
 
 题外话，知道第一个错为什么报了 2 次吗，因为 router-link 使用了两次呀，`Home`和`About`两个`router-link`呀！那接下去就根据他的错误提示一步一步来
 
@@ -129,7 +129,7 @@ class VueRouter {
 export default VueRouter;
 ```
 
-![05-运行时没有提供template编译.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/c57a53b5d11740e5a8f508deed6dc076~tplv-k3u1fbpfcp-watermark.image?)
+![05-运行时没有提供template编译.jpg](./images/05-运行时没有提供template编译.jpg)
 
 其实大家不知道有没有见到过`vue.js`，`vue.runtime.js`，这两者区别是什么，前者是带编译器的，后者是运行时不带编译器的，我们本质上 template 最终都会转换为 render 函数，所以 在这里 template 的方案走不通，此时就可以使用 render 的方案
 
@@ -159,7 +159,7 @@ export default VueRouter;
 
 注意看，奇迹出现了，没有任何报错，东西显示出来了，我们离成功又近了一步，虽然内容都是写死的
 
-![06-初步成功没有报错.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/27e3e2b0d4674a4f97f5178cdc85f0d6~tplv-k3u1fbpfcp-watermark.image?)
+![06-初步成功没有报错.jpg](./images/06-初步成功没有报错.jpg)
 
 ### router-link 组件处理
 
@@ -197,7 +197,7 @@ Vue.component("router-link", {
 });
 ```
 
-![07-router-link父传子.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0a77871a419a4a569320f4cb958d7290~tplv-k3u1fbpfcp-watermark.image?)
+![07-router-link父传子.jpg](./images/07-router-link父传子.jpg)
 
 #### 默认插槽处理
 
@@ -227,7 +227,7 @@ Vue.component("router-link", {
 
 此时，注意看，默认的内容是不是就出现了！至此我们的全局组件`router-link`就完成了
 
-![08-router-link完成.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/29f17dae27fb4052894542c8b32460d2~tplv-k3u1fbpfcp-watermark.image?)
+![08-router-link完成.jpg](./images/08-router-link完成.jpg)
 
 ### router-view 组件处理
 
@@ -255,7 +255,7 @@ export default VueRouter
 
 然后就这样直接就能看到效果了
 
-![09-h函数第一个参数传入组件.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a326898e867d4c31822abbf7078aa8d3~tplv-k3u1fbpfcp-watermark.image?)
+![09-h函数第一个参数传入组件.jpg](./images/09-h函数第一个参数传入组件.jpg)
 
 那我们这里该写死`Home`吗，显然不对吧，这里应该要根据我们之后 hash 的变化，显示对应的页面组件，那这就是我们之后的目标!
 
@@ -271,7 +271,7 @@ export default VueRouter
   }
 ```
 
-![10-打印options.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/965e9a878cab451093ccdf20071f0a74~tplv-k3u1fbpfcp-watermark.image?)
+![10-打印options.jpg](./images/10-打印options.jpg)
 
 可以，那routes就暂时先这么处理
 
@@ -291,7 +291,7 @@ export default VueRouter
   }
 ```
 
-![11-hashchange打印.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/10e7a82b27194505afb0c84e7af44d45~tplv-k3u1fbpfcp-watermark.image?)
+![11-hashchange打印.gif](./images/11-hashchange打印.gif)
 
 细心的小伙伴肯定发现了个事！打印的内容最前面是有`#`的对吧，所以我们之后用成员变量接收的时候可以处理下这个细节，这样之后和我们路由规则`path`去做匹配会方便很多
 
@@ -360,7 +360,7 @@ const router = new VueRouter(...) // 在做实例化VueRouter 才有router实例
 
 眼见为实看下效果，只有根组件才能拿到这个 router
 
-![12-根组件传入的router拿到了.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/02cc047013b94fbeb1d81f6c1f9a9c47~tplv-k3u1fbpfcp-watermark.image?)
+![12-根组件传入的router拿到了.jpg](./images/12-根组件传入的router拿到了.jpg)
 
 那接下去，实例都可以拿到了，不就简单挂载原型上就可以了，代码如下
 
@@ -389,7 +389,7 @@ Vue.component("router-view", {
 });
 ```
 
-![13-current打印.gif](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22bffa9b75704893878ce018c5d016e2~tplv-k3u1fbpfcp-watermark.image?)
+![13-current打印.gif](./images/13-current打印.gif)
 
 除了第一次 render 打印了 current，后面不管怎么 hashchange 触发，都不会重新执行 render，这个是为什么呢！真相只有一个，因为 current 不是响应式的！
 
@@ -424,7 +424,7 @@ class VueRouter {
 export default VueRouter
 ```
 
-![14-拿到大Vue.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/332cfbe1043a413a9450610ac63104df~tplv-k3u1fbpfcp-watermark.image?)
+![14-拿到大Vue.jpg](./images/14-拿到大Vue.jpg)
 
 ##### 实现响应式
 
@@ -446,7 +446,7 @@ export default VueRouter
   }
 ```
 
-![15-Vue提供的工具响应式方法.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6187d12a38cb468584e46f1a24ad0fcc~tplv-k3u1fbpfcp-watermark.image?)
+![15-Vue提供的工具响应式方法.jpg](./images/15-Vue提供的工具响应式方法.jpg)
 
 就是这个方法！接着就可以把`this.current = '/'`改写下，在接着测试下响应式的功能，主要看 current 改变后是否可以触发 render 函数
 
@@ -454,7 +454,7 @@ export default VueRouter
 _Vue.util.defineReactive(this, "current", window.location.hash.slice(1) || "/");
 ```
 
-![16-测试响应式.gif](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53aa347f7bf64f56b98c8a43bcd96cb0~tplv-k3u1fbpfcp-watermark.image?)
+![16-测试响应式.gif](./images/16-测试响应式.gif)
 
 如上图所示，响应式这不就完成了吗！之后只要在 render 中，处理好找到对应的组件渲染逻辑就大功告成了
 
@@ -491,7 +491,7 @@ render (h) {
 }
 ```
 
-![17-实现my-router.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bb8969eee1a64521bbea58aa9e109d1c~tplv-k3u1fbpfcp-watermark.image?)
+![17-实现my-router.gif](./images/17-实现my-router.gif)
 
 这样我们就完成了个简易版的vue-router，虽然还有很多功能没做，但一个基本的hash模式的切换路由原理就是这样
 
@@ -538,7 +538,7 @@ render (h) {
 
 我们还没有实现嵌套路由，那大家猜下访问`/about`会不会报错呢
 
-![18-嵌套路由报错.jpg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6617b17804ae43d4aaeb4fbd18f3bc3e~tplv-k3u1fbpfcp-watermark.image?)
+![18-嵌套路由报错.jpg](./images/18-嵌套路由报错.jpg)
 
 一看竟然报错了！那为什么会报错的，聪明老铁们是不是一下子就想到了，因为在访问`/about`的时候渲染了我们的`About`页面组件，该组件里有用了`router-view`，此时`about`页面里面二级路由出口`router-view`，又会去执行`render`函数导致了栈溢出
 
@@ -562,7 +562,7 @@ render (h) {
       }
 ```
 
-![19-分析访问aboutInfo不会报错的原因.jpg](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b8c1854fbfce4f1086e11bab267cc40f~tplv-k3u1fbpfcp-watermark.image?)
+![19-分析访问aboutInfo不会报错的原因.jpg](./images/19-分析访问aboutInfo不会报错的原因.jpg)
 
 上述代码说明，路由规则没有匹配到，所以没有渲染对应的组件，`render(null)`不会报错
 
@@ -593,7 +593,7 @@ render (h) {
   }
 ```
 
-![20-源码分析.jpg](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/81aa868ef8f94d1fa1aaf3bcacff13fc~tplv-k3u1fbpfcp-watermark.image?)
+![20-源码分析.jpg](./images/20-源码分析.jpg)
 
 根据源码核心的实现，知道了关键的步骤
 
@@ -694,7 +694,7 @@ matched是个数组，他用于匹配对应的规则，具体匹配的样子，�
 
 先来看下打印，然后分析一波
 
-![21-分析需要递归处理matched数组.jpg](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a8642a72ad484523b7ca319825e794c7~tplv-k3u1fbpfcp-watermark.image?)
+![21-分析需要递归处理matched数组.jpg](./images/21-分析需要递归处理matched数组.jpg)
 
 接着就可以去实现了
 
@@ -742,7 +742,7 @@ matched是个数组，他用于匹配对应的规则，具体匹配的样子，�
 
 ```
 
-![22-嵌套路由基本实现.jpg](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/98b7fc4be6674aa1b54b8f61bc28abcc~tplv-k3u1fbpfcp-watermark.image?)
+![22-嵌套路由基本实现.jpg](./images/22-嵌套路由基本实现.jpg)
 
 ##### hashChange后重置数组和重新调用match匹配规则
 
@@ -760,7 +760,7 @@ matched是个数组，他用于匹配对应的规则，具体匹配的样子，�
 
 至此，嵌套路由就已经完成了，具体效果如下
 
-![23-演示嵌套路由.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/55513217046d47e9a5eb22b8e1bb78d0~tplv-k3u1fbpfcp-watermark.image?)
+![23-演示嵌套路由.gif](./images/23-演示嵌套路由.gif)
 
 ## 总结
 

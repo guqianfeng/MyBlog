@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue3</title>
+</head>
+
+<body>
+    <div id="app">
+        
+    </div>
+    <!-- <script src="http://unpkg.com/vue@next"></script> -->
+    <script>
+        const Vue = {
+            createApp(options) {
+                return {
+                    mount(selector) {
+                        // 处理选项
+                        if (options.setup) {
+                            this.setupState = options.setup()
+                        }
+                        if (options.data) {
+                            this.data = options.data()
+                        }
+                        this.proxy = new Proxy(this, {
+                            get(target, key) {
+                                if (target.setupState && key in target.setupState) {
+                                    return target.setupState[key]
+                                } else if (target.data && key in target.data) {
+                                    return target.data[key]
+                                }
+                            }
+                        })
+                        const parent = document.querySelector(selector)
+                        const elm = options.render.call(this.proxy)
+                        // console.log(elm);
+                        // 为了更新考虑，清空parent中的内容(初始化的时候处理)
+                        parent.innerHTML = ''
+                        parent.appendChild(elm)
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        // console.log(Vue);
+        const { createApp } = Vue
+        const app = createApp({
+            data () {
+                return {
+                    title: 'data title',
+                }
+            },
+            setup() {
+                return {
+                    title: 'setup title'
+                }
+            },
+            render() {
+                const h1 = document.createElement('h1')
+                h1.textContent = this.title
+                return h1
+            }
+        })
+        app.mount('#app')
+
+    </script>
+</body>
+
+</html>
