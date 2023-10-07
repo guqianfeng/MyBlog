@@ -10,8 +10,7 @@ export const framework = [
     {
       text: 'React',
       items: [
-        { text: 'redux', link: '/frontend/framework/react/redux.md' },
-        { text: 'react-native', link: '/frontend/framework/react/react-native.md' },
+        { text: 'React错误边界处理', link: '/frontend/framework/react/React错误边界处理/index.md' },
       ]
     },
   ]
