@@ -8,6 +8,9 @@ export default defineConfig({
   title: "梅利奥猪猪の窝",
   description: "梅利奥猪猪の窝",
   themeConfig: {
+    search: {
+      provider: 'local',
+    },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
