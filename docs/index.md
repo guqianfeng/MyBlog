@@ -13,7 +13,7 @@ hero:
       link: /frontend/index
     - theme: alt
       text: Cocos Creator
-      link: /cocos/index
+      link: /cocos/base/index
     - theme: alt
       text: 游戏爱好者
       link: /game/index

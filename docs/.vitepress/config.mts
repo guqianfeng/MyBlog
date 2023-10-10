@@ -20,11 +20,11 @@ export default defineConfig({
         items: [
           {
             text: '原生',
-            link: '/frontend/native/index.md'
+            link: '/frontend/native/js/字节跳动一面的一道基础题/index.md'
           },
           {
             text: '框架',
-            link: '/frontend/framework/index.md'
+            link: '/frontend/framework/vue/手摸手写简易VueRouter3/index.md'
           }
         ]
       },

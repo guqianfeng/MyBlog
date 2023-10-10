@@ -1,3 +1,0 @@
-# cocos creator
-
-亲，别急，会更新哒~

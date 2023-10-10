@@ -1,12 +1,12 @@
-# frontend
+# 前端
 
-## :rofl: [native blog](./native/index.md)
+## :rofl: [原生相关博客](./native/JS/字节跳动一面的一道基础题/index.md)
 
 - JS
 
 - TS
 
-## :smirk: [framework blog](./framework/index.md)
+## :smirk: [框架相关博客](./framework/vue/手摸手写简易VueRouter3/index.md)
 
 - Vue
 
@@ -27,7 +27,7 @@ Here are some ideas to get you started:
 - ⚡ Fun fact: ...
 -->
 
-## 💬 About Me
+## 💬 关于我
 
 - Web前端开发，一个喜欢撸码也喜欢打游戏的咸鱼
 
@@ -41,18 +41,18 @@ Here are some ideas to get you started:
 
 - 邮箱：<fred_gqf0221@163.com>
 
-## 🔭 Working
+## 🔭 工作
 
 - 一名持续进步的前端讲师
 
-## 🌱 Skills
+## 🌱 技术栈
 
 - Vue2 + Vuex
 - Vue3 + Pinia + TS
 - React + Redux + TS
 - Vim
 
-## :thumbsup: Others
+## :thumbsup: 其他
 
 ![1](https://github-profile-trophy.vercel.app/?username=guqianfeng)
 
