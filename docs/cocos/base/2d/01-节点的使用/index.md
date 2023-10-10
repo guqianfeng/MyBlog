@@ -37,7 +37,7 @@ Node不可以删除
 
 ### Node的属性
 
-- position 位置坐标
+- position 相对父节点的位置坐标
   - 场景编辑器 W快捷键 演示操作
 - rotation 旋转
   - 场景编辑器 E快捷键 演示操作
