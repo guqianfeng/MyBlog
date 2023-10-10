@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { native } from './router/frontend/native.mjs'
 import { framework } from './router/frontend/framework.mjs'
+import { base } from './router/cocos/base.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -27,13 +28,22 @@ export default defineConfig({
           }
         ]
       },
-      { text: 'Cocos Creator', link: '/cocos/index.md' },
+      { 
+        text: 'Cocos Creator', 
+        items: [
+          {
+            text: 'cocos creator 0基础',
+            link: '/cocos/base/index.md'
+          }
+        ]
+      },
       { text: '游戏爱好者', link: '/game/index.md' },
     ],
 
     sidebar: {
       '/frontend/native/': native,
       '/frontend/framework/': framework,
+      '/cocos/base': base
     },
 
     /**
