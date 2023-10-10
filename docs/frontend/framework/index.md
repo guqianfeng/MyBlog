@@ -3,7 +3,7 @@ prev: false
 next: false
 ---
 
-# framework
+# 框架
 
 - Vue
 

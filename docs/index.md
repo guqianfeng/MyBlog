@@ -9,21 +9,21 @@ hero:
   actions:
     - theme: brand
     # - theme: alt
-      text: Frontend
+      text: 前端
       link: /frontend/index
     - theme: alt
-      text: Cocos
+      text: Cocos Creator
       link: /cocos/index
     - theme: alt
-      text: Game
+      text: 游戏爱好者
       link: /game/index
 
 features:
-  - title: Frontend
+  - title: 前端
     details: 记录我的前端之旅
-  - title: Cocos
-    details: 自学cocos打造我的副业
-  - title: Game
-    details: 游戏爱好者
+  - title: Cocos Creator
+    details: 从零开始的cocos creator
+  - title: 游戏爱好者
+    details: 啥都玩啥都菜，越菜越爱玩！记录玩的游戏~
 ---
 

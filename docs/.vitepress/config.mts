@@ -13,22 +13,22 @@ export default defineConfig({
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
+      { text: '首页', link: '/' },
       {
-        text: 'Frontend',
+        text: '前端',
         items: [
           {
-            text: 'native',
+            text: '原生',
             link: '/frontend/native/index.md'
           },
           {
-            text: 'framework',
+            text: '框架',
             link: '/frontend/framework/index.md'
           }
         ]
       },
-      { text: 'Cocos', link: '/cocos/index.md' },
-      { text: 'Game', link: '/game/index.md' },
+      { text: 'Cocos Creator', link: '/cocos/index.md' },
+      { text: '游戏爱好者', link: '/game/index.md' },
     ],
 
     sidebar: {

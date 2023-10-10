@@ -3,7 +3,7 @@ prev: false
 next: false
 ---
 
-# native
+# 原生
 
 - JS
 
