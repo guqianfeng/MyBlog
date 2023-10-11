@@ -23,3 +23,5 @@
 ### cocos creator
 
 面向组件开发(组合)
+
+[节点和组件](https://docs.cocos.com/creator/manual/zh/concepts/scene/node-component.html)
