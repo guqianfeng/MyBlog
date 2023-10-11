@@ -25,10 +25,10 @@
     }
 
     class Person {
-        delegate: ICalc
+        delegate: ICalc | null = null
         // 不是你去计算，是让代理人去计算
         getResult(a: number, b: number) {
-            return this.delegate.calc(a, b)
+            return this.delegate?.calc(a, b)
         }
     }
 
