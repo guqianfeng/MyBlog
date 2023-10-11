@@ -1,7 +1,10 @@
-/**
- * 工厂模式
- */
 {
+    /**
+     * 工厂模式
+     * 举例
+     *  用工厂来制造敌人，敌人有很多种类
+     *  敌人工厂，传入对应的类型，创建不同类型的敌人
+     */
     enum EnemyType {
         A,
         B,
@@ -44,6 +47,6 @@
         }
     }
 
-    const enemyC = Enemy.Create(EnemyType.A)
-    console.log(enemyC);
+    const enemy = Enemy.Create(EnemyType.A)
+    console.log(enemy);
 }
