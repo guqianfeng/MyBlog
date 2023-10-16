@@ -1,6 +1,6 @@
 # 前端
 
-## :rofl: [原生相关博客](./native/JS/字节跳动一面的一道基础题/index.md)
+## :rofl: [原生相关博客](./native/JS/高阶函数之一个求和竟然可以玩出花/index.md)
 
 - JS
 

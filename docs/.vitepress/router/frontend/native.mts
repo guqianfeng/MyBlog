@@ -3,7 +3,7 @@ export const native = [
     {
       text: 'JS',
       items: [
-        { text: '字节跳动一面的一道基础题', link: '/frontend/native/JS/字节跳动一面的一道基础题/index.md' },
+        // { text: '字节跳动一面的一道基础题', link: '/frontend/native/JS/字节跳动一面的一道基础题/index.md' },
         { text: '高阶函数之一个求和竟然可以玩出花', link: '/frontend/native/JS/高阶函数之一个求和竟然可以玩出花/index.md' },
       ]
     },
