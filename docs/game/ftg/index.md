@@ -13,3 +13,10 @@
 ## 现状
 
 虽然我在朋友圈子里很强了，然而游戏段位，差不多也就个白金钻石这种！但大家也知道，游戏嘛总有比你更厉害的。拿街霸6举例，最高段位大师段位(新的一个赛季里大师上面好像还有传说)，大师段位里还有M阶多少分，那些M阶世界有排名的基本都是职业选手！总之很多可以随便揍我的，不要说大师段位了，现在钻石段位里，10个里也是5个以上可以随便揍我，希望自己能慢慢变强，实现自己的梦想(**最强业余玩家**)
+
+## 燃烧吧我的格斗魂
+
+以下视频是b站做格斗游戏的up主做的，我觉得非常不错，分享给大家！且看且珍惜，希望这些宝藏up视频一直不删！
+
+- [送给格斗游戏的一封情书点燃你的格斗魂！回顾EVO2017](https://www.bilibili.com/video/BV1bp4y177m4/?buvid=377b28133ba1d8c2f872ee3d5b40056d&from_spmid=main.my-cache.0.0&is_story_h5=false&mid=ohNvuJp84IEwuqXpoSUWTA%3D%3D&plat_id=312&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=C3E54C9C-3831-429C-941F-A8E7E917F78F&share_source=WEIXIN&share_tag=s_i&spmid=playlist.playlist-video-detail.0.0&timestamp=1697463834&unique_k=gcHbTTn&up_id=182369692)
+- [大司马的女粉入坑街霸6，还选最弱的桑吉尔夫，会怎么样？](https://www.bilibili.com/video/BV1Y14y1y7Bi/?spm_id_from=333.999.0.0&vd_source=466a6fc2a0723e482286612cb7cfcb66)
