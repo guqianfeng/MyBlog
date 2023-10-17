@@ -21,9 +21,15 @@ hero:
 features:
   - title: 前端
     details: 记录我的前端之旅
+    link: /frontend/index
+    icon: 📝
   - title: Cocos Creator
     details: 从零开始的cocos creator
+    link: /cocos/base/index
+    icon: 🌝
   - title: 游戏爱好者
     details: 啥都玩啥都菜，越菜越爱玩！记录玩的游戏~
+    link: /game/index
+    icon: 🎮
 ---
 
