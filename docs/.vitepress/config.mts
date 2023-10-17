@@ -11,7 +11,13 @@ export default defineConfig({
   description: "梅利奥猪猪の窝",
   themeConfig: {
     search: {
-      provider: 'local',
+      // provider: 'local',
+      provider: 'algolia',
+      options: {
+        appId: 'YD3K11GAYY',
+        apiKey: 'fbb338c94e06552334ffd3cff332b55e',
+        indexName: 'guqianfeng'
+      }
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [
