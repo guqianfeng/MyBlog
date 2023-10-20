@@ -10,6 +10,7 @@ export const base = [
             { text: '05-标量与向量', link: '/cocos/base/2d/05-标量与向量/index.md' },
             { text: '06-向量的运算及意义', link: '/cocos/base/2d/06-向量的运算及意义/index.md' },
             { text: '07-脚本解析', link: '/cocos/base/2d/07-脚本解析/index.md' },
+            { text: '08-脚本生命周期', link: '/cocos/base/2d/08-脚本生命周期/index.md' },
         ]
     },
     {

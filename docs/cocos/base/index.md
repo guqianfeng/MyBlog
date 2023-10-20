@@ -6,6 +6,12 @@
 - 下载dashboard(cocos creator版本管理工具)
 - 从dashboard在下载对应的版本
 
+## 官方文档
+
+记得要选编辑器对应的版本
+
+[Cocos Creator 3.8 用户手册](https://docs.cocos.com/creator/manual/zh/)
+
 ## 专业术语 概念
 
 ### 导演
