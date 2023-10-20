@@ -9,6 +9,7 @@ export const base = [
             { text: '04-精灵图集', link: '/cocos/base/2d/04-精灵图集/index.md' },
             { text: '05-标量与向量', link: '/cocos/base/2d/05-标量与向量/index.md' },
             { text: '06-向量的运算及意义', link: '/cocos/base/2d/06-向量的运算及意义/index.md' },
+            { text: '07-脚本解析', link: '/cocos/base/2d/07-脚本解析/index.md' },
         ]
     },
     {
