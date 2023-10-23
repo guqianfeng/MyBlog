@@ -7,11 +7,11 @@ outline: deep
 [Asset Bundle 介绍](https://docs.cocos.com/creator/manual/zh/asset/bundle.html#asset-bundle-%E4%BB%8B%E7%BB%8D)
 
 
-## 资源结构
+## 资源目录结构
 
-AssetsPackage -> GUI -> test -> doctor图集，GUI设置为Bundle
+新建`AssetsPackage` -> `GUI` -> `test` -> `doctor`图集，`GUI`设置为`Bundle`
 
-## 代码加载实现
+## 代码实现加载
 
 创建精灵节点，挂载脚本，代码如下
 
