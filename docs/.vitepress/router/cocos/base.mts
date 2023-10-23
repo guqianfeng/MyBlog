@@ -12,6 +12,7 @@ export const base = [
             { text: '07-脚本解析', link: '/cocos/base/2d/07-脚本解析/index.md' },
             { text: '08-脚本生命周期', link: '/cocos/base/2d/08-脚本生命周期/index.md' },
             { text: '09-节点常用属性方法', link: '/cocos/base/2d/09-节点常用属性方法/index.md' },
+            { text: '10-预设体', link: '/cocos/base/2d/10-预设体/index.md' },
         ]
     },
     {
