@@ -1,0 +1,41 @@
+---
+outline: deep
+---
+
+# 资源动态加载
+
+[Asset Bundle 介绍](https://docs.cocos.com/creator/manual/zh/asset/bundle.html#asset-bundle-%E4%BB%8B%E7%BB%8D)
+
+
+## 资源结构
+
+AssetsPackage -> GUI -> test -> doctor图集，GUI设置为Bundle
+
+## 代码加载实现
+
+创建精灵节点，挂载脚本，代码如下
+
+```ts
+import { _decorator, assetManager, Component, Sprite, SpriteAtlas } from 'cc';
+const { ccclass, property } = _decorator;
+
+@ccclass('Test')
+export class Test extends Component {
+    start() {
+        assetManager.loadBundle('GUI', (err, bundle) => {
+            if (err) return;
+            bundle.load('test/doctor', SpriteAtlas, (err, sa) => {
+                if (err) return;
+                const sf = sa.getSpriteFrame('add')
+                const comp = this.node.getComponent(Sprite)
+                comp.spriteFrame = sf
+            })
+        })
+    }
+
+    update(deltaTime: number) {
+
+    }
+}
+```
+
