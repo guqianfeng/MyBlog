@@ -17,7 +17,9 @@ export const base = [
             { text: '12-场景管理', link: '/cocos/base/2d/12-场景管理/index.md' },
             { text: '13-键鼠事件', link: '/cocos/base/2d/13-键鼠事件/index.md' },
             { text: '14-触摸与自定义事件', link: '/cocos/base/2d/14-触摸与自定义事件/index.md' },
+            { text: '15-缓动系统', link: '/cocos/base/2d/15-缓动系统/index.md' },
             // -- append route here --
+
 
 
         ]
