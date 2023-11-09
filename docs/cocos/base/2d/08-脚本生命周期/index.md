@@ -27,3 +27,41 @@ PS: 组件启用禁用会执行，节点启用禁用也会执行
 ### onDestroy
 
 组件销毁的时候调用
+
+## 综合小案例
+
+start的生命周期,通过代码修改节点位移，缩放，旋转
+```ts
+import { _decorator, Component, Label, Node, Vec3 } from 'cc';
+const { ccclass, property } = _decorator;
+
+@ccclass('Test')
+export class Test extends Component {
+
+    curPos = new Vec3()
+    curScale = new Vec3()
+
+    start() {
+        const labelComp = this.node.getComponent(Label)
+        labelComp.string = '帅峰你好呀'
+        console.log(this.node.position);
+        console.log(this.node.rotation);
+        console.log(this.node.scale);
+    }
+
+    update(deltaTime: number) {
+        this.node.getPosition(this.curPos)
+        this.curPos.x += 100 * deltaTime;
+        this.node.setPosition(this.curPos)
+
+        this.node.getScale(this.curScale)
+        this.curScale.x += .5 * deltaTime;
+        this.curScale.y += .5 * deltaTime;
+        this.node.setScale(this.curScale)
+
+        const angle = this.node.angle;
+        this.node.angle = angle + 1
+    }
+}
+```
+
