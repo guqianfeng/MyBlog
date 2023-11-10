@@ -30,3 +30,28 @@ outline: deep
 ## 综合练习
 
 上下两堵墙，敌人自动巡逻
+
+```ts
+import { _decorator, Component, ERaycast2DType, Node, PhysicsSystem2D, UITransform, v2, v3 } from 'cc';
+const { ccclass, property } = _decorator;
+
+@ccclass('EnemyCtrl')
+export class EnemyCtrl extends Component {
+    dir = v2(0, 1)
+
+    start() {
+
+    }
+
+    update(deltaTime: number) {
+        this.node.setPosition(this.node.position.x, this.node.position.y + this.dir.y * 100 * deltaTime)
+        const transform = this.node.getComponent(UITransform)
+        const p1 = transform.convertToWorldSpaceAR(v3(this.node.position.x, this.node.position.y))
+        const p2 = transform.convertToWorldSpaceAR(v3(this.node.position.x, this.node.position.y + this.dir.y * 100))
+        const results = PhysicsSystem2D.instance.raycast(p1, p2, ERaycast2DType.Closest);
+        if (results.length > 0) {
+            this.dir.y *= -1
+        }
+    }
+}
+```
