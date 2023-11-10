@@ -19,7 +19,9 @@ export const base = [
             { text: '14-触摸与自定义事件', link: '/cocos/base/2d/14-触摸与自定义事件/index.md' },
             { text: '15-缓动系统', link: '/cocos/base/2d/15-缓动系统/index.md' },
             { text: '16-接鸡蛋案例', link: '/cocos/base/2d/16-接鸡蛋案例/index.md' },
+            { text: '17-物理系统', link: '/cocos/base/2d/17-物理系统/index.md' },
             // -- append route here --
+
 
 
 
