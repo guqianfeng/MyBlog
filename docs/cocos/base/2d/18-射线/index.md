@@ -22,7 +22,7 @@ outline: deep
 
 检测射线路径上的所有碰撞体，检测到的结果顺序不是固定的。在这种检测类型下，一个碰撞体可能会返回多个结果，这是因为 Box2D 是通过检测夹具（fixture）来进行物体检测的，而一个碰撞体中可能由多个夹具（fixture）组成的，慢。
 
-- ERaycast2DType.AllClosest (一个射线穿过物体获取2个点，返回所有穿过物体离射线最近的点)
+- ERaycast2DType.AllClosest (一个射线穿过物体有2个点，其中有个点事离发射点最近，返回所有穿过物体离发射点最近的点)
 
 检测射线路径上所有碰撞体，但是会对返回值进行删选，只返回每一个碰撞体距离射线起始点最近的那个点的相关信息，最慢。
 
@@ -48,6 +48,7 @@ export class EnemyCtrl extends Component {
         const transform = this.node.getComponent(UITransform)
         const p1 = transform.convertToWorldSpaceAR(v3(this.node.position.x, this.node.position.y))
         const p2 = transform.convertToWorldSpaceAR(v3(this.node.position.x, this.node.position.y + this.dir.y * 100))
+        // 注意p1和p2要世界坐标
         const results = PhysicsSystem2D.instance.raycast(p1, p2, ERaycast2DType.Closest);
         if (results.length > 0) {
             this.dir.y *= -1

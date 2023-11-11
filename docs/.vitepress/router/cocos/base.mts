@@ -21,7 +21,19 @@ export const base = [
             { text: '16-接鸡蛋案例', link: '/cocos/base/2d/16-接鸡蛋案例/index.md' },
             { text: '17-物理系统', link: '/cocos/base/2d/17-物理系统/index.md' },
             { text: '18-射线', link: '/cocos/base/2d/18-射线/index.md' },
+            { text: '19-飞机大战案例', link: '/cocos/base/2d/19-飞机大战案例/index.md' },
+            { text: '20-FlappyBird案例', link: '/cocos/base/2d/20-FlappyBird案例/index.md' },
+            { text: '21-屏幕适配与遮罩', link: '/cocos/base/2d/21-屏幕适配与遮罩/index.md' },
+            { text: '22-按钮与布局', link: '/cocos/base/2d/22-按钮与布局/index.md' },
+            { text: '23-滑动进度控件', link: '/cocos/base/2d/23-滑动进度控件/index.md' },
+            { text: '24-输入框', link: '/cocos/base/2d/24-输入框/index.md' },
             // -- append route here --
+
+
+
+
+
+
 
 
 

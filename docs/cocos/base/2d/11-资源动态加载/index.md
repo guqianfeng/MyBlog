@@ -9,7 +9,7 @@ outline: deep
 
 ## 资源目录结构
 
-新建`AssetsPackage` -> `GUI` -> `test` -> `doctor`图集，`GUI`设置为`Bundle`
+新建`AssetsPackage` -> `GUI` -> `xxx文件夹` -> `yyy`图集，`GUI`设置为`Bundle`
 
 ## 代码实现加载
 
@@ -24,7 +24,7 @@ export class Test extends Component {
     start() {
         assetManager.loadBundle('GUI', (err, bundle) => {
             if (err) return;
-            bundle.load('test/doctor', SpriteAtlas, (err, sa) => {
+            bundle.load('xxx/yyy', SpriteAtlas, (err, sa) => {
                 if (err) return;
                 const sf = sa.getSpriteFrame('add')
                 const comp = this.node.getComponent(Sprite)

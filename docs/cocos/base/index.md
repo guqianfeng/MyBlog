@@ -20,14 +20,6 @@
 
 ### 精灵
 
-## cocos与cocos creator编程思想差异
+## cocos creator编程思想
 
-### cocos
-
-继承
-
-### cocos creator
-
-面向组件开发(组合)
-
-[节点和组件](https://docs.cocos.com/creator/manual/zh/concepts/scene/node-component.html)
+面向组件开发

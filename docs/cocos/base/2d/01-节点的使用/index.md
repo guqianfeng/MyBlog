@@ -17,7 +17,7 @@ outline: deep
 
 ### 看Node节点文档
 
-Node不可以删除
+编辑器中，属性检查器有`?`帮助按钮，可查看对应的文档
 
 ### 看UI 变换组件文档
 
@@ -48,7 +48,7 @@ Node不可以删除
 
 - Content Size 内容尺寸
   - 场景编辑器 T快捷键 演示操作
-- Anchor Point 锚点(下节课讲解)  
+- Anchor Point 锚点(下一节讲解)  
 
 ### Sprite 组件的属性
 
