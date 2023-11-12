@@ -28,7 +28,9 @@ export const base = [
             { text: '23-滑动进度控件', link: '/cocos/base/2d/23-滑动进度控件/index.md' },
             { text: '24-输入框', link: '/cocos/base/2d/24-输入框/index.md' },
             { text: '25-对话框案例', link: '/cocos/base/2d/25-对话框案例/index.md' },
+            { text: '26-打小鸟案例', link: '/cocos/base/2d/26-打小鸟案例/index.md' },
             // -- append route here --
+
 
 
 
