@@ -15,7 +15,7 @@ module.exports = function (plop) {
             {
                 type: 'modify', // 修改文件
                 path: 'docs/.vitepress/router/cocos/2d.mts', // 修改文件路径
-                pattern: /(\/\/ -- append route here --)/gi, // 正则找到标识位置(在文件哪里修改)
+                pattern: /(\/\/ -- append base route here --)/gi, // 正则找到标识位置(在文件哪里修改)
                 templateFile: 'plop-templates/cocos/2d/base.route.ts.hbs' // 模板路径
             }
         ]
