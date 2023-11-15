@@ -26,7 +26,7 @@ export const cc2D = [
             { text: '按钮与布局', link: '/cocos/2d/按钮与布局/index.md' },
             { text: '滑动进度控件', link: '/cocos/2d/滑动进度控件/index.md' },
             { text: '输入框', link: '/cocos/2d/输入框/index.md' },
-            // -- append route here --
+            // -- append base route here --
         ]
     },
 ]
