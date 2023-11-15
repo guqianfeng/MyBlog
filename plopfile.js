@@ -11,7 +11,7 @@ module.exports = function (plop) {
             {
                 type: 'add',
                 path: 'docs/cocos/2d/{{name}}/index.md',
-                templateFile: 'plop-templates/cocos/base/2d/index.md.hbs'
+                templateFile: 'plop-templates/cocos/2d/index.md.hbs'
             },
             {
                 type: 'modify', // 修改文件
