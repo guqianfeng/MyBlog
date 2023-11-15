@@ -1,7 +1,10 @@
 import { defineConfig } from 'vitepress'
+// 前端相关
 import { native } from './router/frontend/native.mjs'
 import { framework } from './router/frontend/framework.mjs'
+// cocos相关
 import { cc2D } from './router/cocos/2d.mjs'
+// 游戏相关
 import { ftg } from './router/game/ftg.mjs';
 
 // https://vitepress.dev/reference/site-config
@@ -40,7 +43,7 @@ export default defineConfig({
         items: [
           {
             text: '2d游戏相关',
-            link: '/cocos/2d/节点的使用/index.md'
+            link: '/cocos/2d/base/节点的使用/index.md'
           },
         ]
       },
