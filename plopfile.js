@@ -9,7 +9,7 @@ module.exports = function (plop) {
         actions: [
             {
                 type: 'add',
-                path: 'docs/cocos/2d/{{name}}/index.md',
+                path: 'docs/cocos/2d/base/{{name}}/index.md',
                 templateFile: 'plop-templates/cocos/2d/index.md.hbs'
             },
             {
@@ -31,7 +31,7 @@ module.exports = function (plop) {
         actions: [
             {
                 type: 'add',
-                path: 'docs/cocos/2d/案例-{{name}}/index.md',
+                path: 'docs/cocos/2d/game/案例-{{name}}/index.md',
                 templateFile: 'plop-templates/cocos/2d/index.md.hbs'
             },
             {
