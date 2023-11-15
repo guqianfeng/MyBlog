@@ -29,4 +29,10 @@ export const cc2D = [
             // -- append base route here --
         ]
     },
+    {
+        text: '2d游戏案例',
+        items: [
+            // -- append game route here --
+        ]
+    }
 ]
