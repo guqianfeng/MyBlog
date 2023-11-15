@@ -32,6 +32,11 @@ export const cc2D = [
     {
         text: '2d游戏案例',
         items: [
+            { text: '案例-接鸡蛋', link: '/cocos/2d/案例-接鸡蛋/index.md' },
+            { text: '案例-飞机大战', link: '/cocos/2d/案例-飞机大战/index.md' },
+            { text: '案例-FlappyBird', link: '/cocos/2d/案例-FlappyBird/index.md' },
+            { text: '案例-打小鸟', link: '/cocos/2d/案例-打小鸟/index.md' },
+            { text: '案例-匹配卡片', link: '/cocos/2d/案例-匹配卡片/index.md' },
             // -- append game route here --
         ]
     }
