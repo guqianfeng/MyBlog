@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { native } from './router/frontend/native.mjs'
 import { framework } from './router/frontend/framework.mjs'
-import { base } from './router/cocos/base.mjs'
+import { cc2D } from './router/cocos/2d.mjs'
 import { ftg } from './router/game/ftg.mjs';
 
 // https://vitepress.dev/reference/site-config
@@ -39,9 +39,9 @@ export default defineConfig({
         text: 'Cocos Creator',
         items: [
           {
-            text: 'cocos creator 0基础',
-            link: '/cocos/base/index.md'
-          }
+            text: '2d游戏相关',
+            link: '/cocos/2d/节点的使用/index.md'
+          },
         ]
       },
       {
@@ -58,7 +58,7 @@ export default defineConfig({
     sidebar: {
       '/frontend/native/': native,
       '/frontend/framework/': framework,
-      '/cocos/base': base,
+      '/cocos/2d': cc2D,
       '/game/ftg': ftg
     },
 

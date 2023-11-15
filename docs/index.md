@@ -13,7 +13,7 @@ hero:
       link: /frontend/index
     - theme: alt
       text: Cocos Creator
-      link: /cocos/base/index
+      link: /cocos/index
     - theme: alt
       text: 游戏爱好者
       link: /game/index
@@ -25,7 +25,7 @@ features:
     icon: 📝
   - title: Cocos Creator
     details: 从零开始的cocos creator
-    link: /cocos/base/index
+    link: /cocos/index
     icon: 🌝
   - title: 游戏爱好者
     details: 啥都玩啥都菜，越菜越爱玩！记录玩的游戏~

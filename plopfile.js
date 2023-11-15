@@ -10,14 +10,14 @@ module.exports = function (plop) {
         actions: [
             {
                 type: 'add',
-                path: 'docs/cocos/base/2d/{{name}}/index.md',
+                path: 'docs/cocos/2d/{{name}}/index.md',
                 templateFile: 'plop-templates/cocos/base/2d/index.md.hbs'
             },
             {
                 type: 'modify', // 修改文件
-                path: 'docs/.vitepress/router/cocos/base.mts', // 修改文件路径
+                path: 'docs/.vitepress/router/cocos/2d.mts', // 修改文件路径
                 pattern: /(\/\/ -- append route here --)/gi, // 正则找到标识位置(在文件哪里修改)
-                templateFile: 'plop-templates/cocos/base/2d/route.ts.hbs' // 模板路径
+                templateFile: 'plop-templates/cocos/2d/route.ts.hbs' // 模板路径
             }
         ]
     });
