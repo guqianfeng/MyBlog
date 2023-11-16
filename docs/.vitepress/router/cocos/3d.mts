@@ -7,6 +7,7 @@ export const cc3D = [
             { text: '光照与阴影', link: '/cocos/3d/base/光照与阴影/index.md' },
             { text: '摄像机与视角', link: '/cocos/3d/base/摄像机与视角/index.md' },
             { text: '物理材质', link: '/cocos/3d/base/物理材质/index.md' },
+            { text: '摄像机跟随', link: '/cocos/3d/base/摄像机跟随/index.md' },
             // -- append base route here --
         ]
     },
