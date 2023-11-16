@@ -6,6 +6,7 @@ import { framework } from './router/frontend/framework.mjs'
 import { cc2D } from './router/cocos/2d.mjs'
 // 游戏相关
 import { ftg } from './router/game/ftg.mjs';
+import { cc3D } from './router/cocos/3d.mts';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -45,6 +46,10 @@ export default defineConfig({
             text: '2d游戏相关',
             link: '/cocos/2d/base/节点的使用/index.md'
           },
+          {
+            text: '3d游戏相关',
+            link: '/cocos/3d/base/什么是材质/index.md'
+          }
         ]
       },
       {
@@ -62,6 +67,7 @@ export default defineConfig({
       '/frontend/native/': native,
       '/frontend/framework/': framework,
       '/cocos/2d': cc2D,
+      '/cocos/3d': cc3D,
       '/game/ftg': ftg
     },
 
