@@ -14,6 +14,7 @@ export const cc3D = [
     {
         text: '3d游戏案例',
         items: [
+            { text: '案例-方块跑跑跑', link: '/cocos/3d/game/案例-方块跑跑跑/index.md' },
             // -- append game route here --
         ]
     }
