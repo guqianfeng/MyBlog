@@ -44,7 +44,7 @@ export class Test extends Component {
 
 ## resources加载
 
-加载图片示例
+加载图片示例，`loadDir`加载一个文件夹下的资源，所以返回的是数组
 ```ts
 resources.loadDir('xxx', SpriteFrame, (err, sp) => {
     // sp返回的是数组
