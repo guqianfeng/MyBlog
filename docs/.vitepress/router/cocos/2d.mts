@@ -39,6 +39,7 @@ export const cc2D = [
             // { text: '案例-匹配卡片', link: '/cocos/2d/game/案例-匹配卡片/index.md' },
             // { text: '案例-弹玻璃球', link: '/cocos/2d/game/案例-弹玻璃球/index.md' },
             { text: '案例-套牛牛', link: '/cocos/2d/game/案例-套牛牛/index.md' },
+            { text: '案例-拼消块块', link: '/cocos/2d/game/案例-拼消块块/index.md' },
             // -- append game route here --
         ]
     }
