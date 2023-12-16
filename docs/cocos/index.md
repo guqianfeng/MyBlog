@@ -23,3 +23,10 @@
 ## cocos creator编程思想
 
 面向组件开发
+
+## cocos入门教程
+
+- 2048 小游戏开发：https://www.sikiedu.com/course/1731
+- 方块先生3D跑酷游戏开发：https://space.bilibili.com/649675584/channel/collectiondetail?sid=701630
+- 2D 射击小游戏开发：https://space.bilibili.com/5981196/channel/collectiondetail?sid=1257703
+- 3D 俯视角割草游戏开发：https://space.bilibili.com/5981196/channel/collectiondetail?sid=902461
