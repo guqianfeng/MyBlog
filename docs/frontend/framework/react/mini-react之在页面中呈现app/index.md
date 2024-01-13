@@ -379,6 +379,12 @@ console.log(AppTest);
 
 打印出来的`React.createElement`就是我们实现的，不信可以在方法中打印信息，这里就不做演示了
 
+补充：如果我们想使用自定义的React，该怎么办，比如想用`SfReact.createSfElement`？这里就要用到`js pragma`的应用，找到`App.jsx`文件，在文件开头第一行添加如下注释
+```jsx
+/** @jsx SfReact.createSfElement */
+```
+这样我们控制台就能看到`SfReact is not defined`的报错了，因为我们的实现的名字就是`React`
+
 ### main.js改为main.jsx
 
 将`main.js`后缀改为`main.jsx`，入口`index.html`引入也改为`main.jsx`，此时发现项目也没有任何问题
