@@ -410,3 +410,48 @@ ReactDom.createRoot(document.querySelector('#root')).render(<App/>)
 
 
 ## 使用vitest做单元测试
+
+之前验证虚拟dom的结构，是通过打印的方式，这种调试的方式是非常低效的。我们可以使用`vitest`
+
+先安装依赖`pnpm i vitest -D`，新建`tests`文件夹，以及测试文件`createElement.spec.js`
+
+编写测试案例
+```js
+import { it, expect, describe } from 'vitest';
+import React from '../core/React.js';
+
+describe('createElement', () => {
+    it('should return vdom', () => {
+        const el = React.createElement('div', {id: 'app'}, 'app')
+        expect(el).toEqual({
+            type: 'div',
+            props: {
+                id: 'app',
+                children: [
+                    {
+                        type: 'TEXT_ELEMENT',
+                        props: {
+                            nodeValue: 'app',
+                            children: []
+                        }
+                    }
+                ]
+            }
+        })
+    })
+})
+```
+
+`package.json`新增脚本
+```diff
+{
+    ....
+    "scripts": {
+        ...
++        "test": "vitest"
+    },
+    ...
+}
+```
+
+执行`pnpm test`测试案例通过，如果后续在`React.js`重构代码，有些逻辑代码误删或者写错，测试用例则通过不了会失败
