@@ -247,7 +247,7 @@ function createElement(type, props, ...children) {
 function render(el, container) {
     // 1. 创建节点
     // 2. 设置非children的属性
-    // 3. 处理children
+    // 3. 处理children，需要递归处理 思考：递归会带来什么问题，如果dom树非常庞大
     // 4. 添加节点
     const dom = el.type === 'TEXT_ELEMENT' ? document.createTextNode("") : document.createElement(el.type)
     Object.keys(el.props).forEach(key => {
