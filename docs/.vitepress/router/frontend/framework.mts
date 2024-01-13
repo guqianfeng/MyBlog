@@ -14,6 +14,7 @@ export const framework = [
       text: 'React',
       items: [
         { text: 'React错误边界处理', link: '/frontend/framework/react/React错误边界处理/index.md' },
+        { text: 'mini-react之在页面中呈现app', link: '/frontend/framework/react/mini-react之在页面中呈现app/index.md' },
       ]
     },
   ]
