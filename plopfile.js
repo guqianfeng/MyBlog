@@ -86,4 +86,26 @@ module.exports = function (plop) {
             }
         ]
     });
+
+    plop.setGenerator('React', {
+        description: '请输入React相关内容',
+        prompts: [{
+            type: 'input',
+            name: 'name',
+            message: '请输入React相关内容'
+        }],
+        actions: [
+            {
+                type: 'add',
+                path: 'docs/frontend/framework/react/{{name}}/index.md',
+                templateFile: 'plop-templates/frontend/framework/react/index.md.hbs'
+            },
+            {
+                type: 'modify', // 修改文件
+                path: 'docs/.vitepress/router/frontend/framework.mts', // 修改文件路径
+                pattern: /(\/\/ -- append react route here --)/gi, // 正则找到标识位置(在文件哪里修改)
+                templateFile: 'plop-templates/frontend/framework/react/react.route.ts.hbs' // 模板路径
+            }
+        ]
+    });
 };
