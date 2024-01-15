@@ -16,6 +16,7 @@ export const framework = [
         { text: 'React错误边界处理', link: '/frontend/framework/react/React错误边界处理/index.md' },
         { text: 'mini-react之在页面中呈现app', link: '/frontend/framework/react/mini-react之在页面中呈现app/index.md' },
         { text: 'mini-react之任务调度器&amp;fiber架构', link: '/frontend/framework/react/mini-react之任务调度器&amp;fiber架构/index.md' },
+            { text: 'mini-react之统一提交&amp;实现 function component', link: '/frontend/framework/react/mini-react之统一提交&amp;实现 function component/index.md' },
             // -- append react route here --
       ]
     },
