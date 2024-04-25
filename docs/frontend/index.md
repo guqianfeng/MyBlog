@@ -41,21 +41,9 @@ Here are some ideas to get you started:
 
 - 邮箱：<fred_gqf0221@163.com>
 
-## 🔭 工作
-
-- 一名持续进步的前端讲师
-
 ## 🌱 技术栈
 
 - Vue2 + Vuex
 - Vue3 + Pinia + TS
 - React + Redux + TS
 - Vim
-
-## :thumbsup: 其他
-
-![1](https://github-profile-trophy.vercel.app/?username=guqianfeng)
-
-![2](https://github-readme-stats.vercel.app/api/top-langs/?username=guqianfeng&layout=compact)
-
-![3](https://github-readme-stats.vercel.app/api?username=guqianfeng)
