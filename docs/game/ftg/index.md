@@ -46,3 +46,14 @@
 
 - [送给格斗游戏的一封情书点燃你的格斗魂！回顾EVO2017](https://www.bilibili.com/video/BV1bp4y177m4/?buvid=377b28133ba1d8c2f872ee3d5b40056d&from_spmid=main.my-cache.0.0&is_story_h5=false&mid=ohNvuJp84IEwuqXpoSUWTA%3D%3D&plat_id=312&share_from=ugc&share_medium=iphone&share_plat=ios&share_session_id=C3E54C9C-3831-429C-941F-A8E7E917F78F&share_source=WEIXIN&share_tag=s_i&spmid=playlist.playlist-video-detail.0.0&timestamp=1697463834&unique_k=gcHbTTn&up_id=182369692)
 - [大司马的女粉入坑街霸6，还选最弱的桑吉尔夫，会怎么样？](https://www.bilibili.com/video/BV1Y14y1y7Bi/?spm_id_from=333.999.0.0&vd_source=466a6fc2a0723e482286612cb7cfcb66)
+
+## 后记
+
+我真的太喜欢玩格斗游戏了，空余时间还做了一款小程序，欢迎大家来体验！
+
+![](./images/我爱FTG小程序码.jpg)
+
+如果你用起来也觉得不错，可以请我喝饮料！非常感谢！
+
+![](./images/微信收款.jpg)
+![](./images/支付宝收款.jpg)
