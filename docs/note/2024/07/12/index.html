@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.0/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.0/dist/index.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"个人IP的探索","children":[{"content":"挖掘个人特质，构建竞争力","children":[{"content":"外在特质，实用价值","children":[{"content":"职业身份","children":[{"content":"工作10年的程序猿（其中当了2年的某马讲师），在音视频领域大厂声网，传智播客黑马程序员，圆通快递（目前在职）等任职","children":[],"payload":{"lines":"8,10"}}],"payload":{"lines":"6,7"}},{"content":"重大转折","children":[{"content":"转行当了讲师","children":[],"payload":{"lines":"12,13"}},{"content":"经历了2次裁员，以及参加新公司新人培训得知马上要有末位淘汰的机制","children":[],"payload":{"lines":"13,14"}},{"content":"下定决心做副业","children":[],"payload":{"lines":"14,16"}}],"payload":{"lines":"10,11"}},{"content":"Title/成绩","children":[{"content":"近几份工作年薪基本30w左右","children":[],"payload":{"lines":"18,19"}},{"content":"有一跑通的副业，和合伙人合作，每月收入有300+","children":[],"payload":{"lines":"19,20"}},{"content":"自己为爱发电的副业，已上线，基本没啥收益，但获得了不少用户的喜欢，有用户打赏的费用","children":[],"payload":{"lines":"20,21"}},{"content":"持续发展副业中","children":[],"payload":{"lines":"21,23"}}],"payload":{"lines":"16,17"}},{"content":"业余爱好","children":[{"content":"玩游戏，比较喜欢ftg格斗类型的游戏","children":[],"payload":{"lines":"25,26"}},{"content":"看动漫追番","children":[],"payload":{"lines":"26,28"}}],"payload":{"lines":"23,24"}},{"content":"个人擅长","children":[{"content":"亲近，可以快速混熟圈子，得到他人的认可","children":[],"payload":{"lines":"30,31"}},{"content":"较强的分享欲","children":[],"payload":{"lines":"31,32"}},{"content":"执行力强","children":[],"payload":{"lines":"32,34"}}],"payload":{"lines":"28,29"}}],"payload":{"lines":"4,5"}},{"content":"内在特质，情绪价值","children":[{"content":"理念信条","children":[{"content":"超越昨天的自己，只要争取，就有希望","children":[],"payload":{"lines":"38,40"}}],"payload":{"lines":"36,37"}},{"content":"性格内核","children":[{"content":"乐于接受挑战，热爱生活","children":[],"payload":{"lines":"42,44"}}],"payload":{"lines":"40,41"}},{"content":"显著特质","children":[{"content":"亲和力，比较会照顾他人的感受","children":[],"payload":{"lines":"46,48"}}],"payload":{"lines":"44,45"}},{"content":"能量事件","children":[{"content":"\n<p data-lines=\"50,51\">想做的事情，会立刻去执行，如目前做的其他的副业项目，就是拿出了自己的行动，即使下班到家10点左右了，还是会研究副业方向到1，2点</p>","children":[],"payload":{"lines":"50,52"}},{"content":"\n<p data-lines=\"52,53\">目前做的几个副业都有了收益，虽然不多，但也很快乐</p>","children":[],"payload":{"lines":"52,54"}}],"payload":{"lines":"48,49"}},{"content":"愉悦时刻","children":[{"content":"与朋友一起打游戏吧，如自己爱玩的ftg游戏街霸6，不仅和朋友一起玩互相进步，也参加了不少线上的业余比赛，曾有比赛拿到季军","children":[],"payload":{"lines":"56,58"}}],"payload":{"lines":"54,55"}}],"payload":{"lines":"34,35"}}],"payload":{"lines":"2,3"}},{"content":"打造自我价值和商业价值双收的IP模式","children":[{"content":"典型的IP商业模式","children":[{"content":"我的用户是谁<br>\n（程序员或是热爱玩游戏）并且想做副业的用户","children":[],"payload":{"lines":"62,64"}},{"content":"我该如何认识我的用户<br>\n技术博客或是游戏群或是副业群","children":[],"payload":{"lines":"64,66"}},{"content":"如何获取用户的信赖<br>\n先要自己跑出副业的成绩，在带些用户跑出成绩，真诚是最重要的","children":[],"payload":{"lines":"66,68"}},{"content":"如何让用户付费","children":[{"content":"自己获得的成绩成就","children":[],"payload":{"lines":"69,70"}},{"content":"指导用户帮助他们获得成绩","children":[],"payload":{"lines":"70,71"}},{"content":"非常不错的服务质量(提供方法，情绪价值)","children":[],"payload":{"lines":"71,73"}}],"payload":{"lines":"68,73"}}],"payload":{"lines":"60,61"}},{"content":"整体链路搭建","children":[{"content":"方向","children":[{"content":"领域及客群","children":[{"content":"不想在卷的想做副业的职场人","children":[],"payload":{"lines":"79,80"}},{"content":"想好好坚持自己爱好但没有啥收入的想做副业的自由职业人","children":[],"payload":{"lines":"80,82"}}],"payload":{"lines":"77,78"}},{"content":"个人特质","children":[{"content":"真诚","children":[],"payload":{"lines":"84,85"}},{"content":"乐于挑战","children":[],"payload":{"lines":"85,86"}},{"content":"贼强的行动力","children":[],"payload":{"lines":"86,87"}},{"content":"快速混熟圈子","children":[],"payload":{"lines":"87,89"}}],"payload":{"lines":"82,83"}}],"payload":{"lines":"75,76"}},{"content":"产品端","children":[{"content":"入手切入","children":[{"content":"程序员群","children":[],"payload":{"lines":"93,94"}},{"content":"游戏群","children":[],"payload":{"lines":"94,95"}},{"content":"副业群","children":[],"payload":{"lines":"95,97"}}],"payload":{"lines":"91,92"}},{"content":"成型的产品矩阵","children":[{"content":"副业群,指导副业（知识星球？指导如何做副业）","children":[],"payload":{"lines":"99,100"}},{"content":"1v1咨询（提供情绪价值等？）","children":[],"payload":{"lines":"100,101"}},{"content":"程序员技术咨询（陪学习）","children":[],"payload":{"lines":"101,102"}},{"content":"游戏陪伴（陪伴玩游戏）","children":[],"payload":{"lines":"102,105"}}],"payload":{"lines":"97,98"}}],"payload":{"lines":"89,90"}},{"content":"流量端","children":[{"content":"入手切入渠道及形式","children":[{"content":"认识很多程序员大佬，有微信好友","children":[],"payload":{"lines":"109,110"}},{"content":"格斗群也有一定知名度，还认识格斗游戏外设的老板","children":[],"payload":{"lines":"110,111"}},{"content":"还加入了很多副业群，可以分享副业经过和副业成绩","children":[],"payload":{"lines":"111,113"}}],"payload":{"lines":"107,108"}},{"content":"成型的流量获取方式","children":[{"content":"流量池：b站，公众号，抖音，小红书","children":[],"payload":{"lines":"115,116"}},{"content":"线上分享：腾讯会议","children":[],"payload":{"lines":"116,117"}},{"content":"线下分享：街霸俱乐部","children":[],"payload":{"lines":"117,119"}}],"payload":{"lines":"113,114"}}],"payload":{"lines":"105,106"}},{"content":"转化端","children":[{"content":"入手切入的转化方式","children":[{"content":"内容展示（副业成绩，用户好评等）","children":[],"payload":{"lines":"123,124"}},{"content":"1v1咨询","children":[],"payload":{"lines":"124,126"}}],"payload":{"lines":"121,122"}},{"content":"成型的转化链路","children":[{"content":"触点：朋友圈，腾讯会议等","children":[],"payload":{"lines":"128,129"}},{"content":"信任建立：社群等","children":[],"payload":{"lines":"129,130"}},{"content":"最终成交：1v1私聊","children":[],"payload":{"lines":"130,133"}}],"payload":{"lines":"126,127"}}],"payload":{"lines":"119,120"}}],"payload":{"lines":"73,74"}}],"payload":{"lines":"58,59"}}],"payload":{"lines":"0,1"}},{})</script>
+</body>
+</html>
